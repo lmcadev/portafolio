@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: tuusuario/react-app
+  IMAGE_NAME: portafolio/react-app
   CONTAINER_NAME: react-app
 
 jobs:

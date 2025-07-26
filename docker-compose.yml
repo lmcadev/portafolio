@@ -1,7 +1,7 @@
 version: '3'
 services:
   react-app:
-    image: tuusuario/react-app:latest
+    image: portafolio/react-app:latest
     container_name: react-app
     restart: always
     ports:
