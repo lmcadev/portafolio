@@ -42,18 +42,31 @@ Bienvenido a mi portafolio profesional. Este proyecto está construido con **Rea
 ## 📁 Estructura del proyecto
 
 portafolio-react/
+
 ├── public/
+
 ├── src/
+
 │   ├── assets/
+
 │   ├── components/
+
 │   ├── pages/
+
 │   ├── data/
+
 │   └── App.jsx
+
 ├── index.html
+
 ├── package.json
+
 ├── Dockerfile
+
 ├── docker-compose.yml
+
 ├── nginx.conf
+
 └── .github/workflows/deploy.yml
 
 ---
@@ -109,7 +122,7 @@ jobs:
 ##  Enlace en vivo
 
 🖥️ Puedes visitar mi portafolio aquí:  
-👉 **http://lmcadev.com**
+👉 **https://lmcadev.com**
 
 ---
 
@@ -121,7 +134,7 @@ jobs:
 
 ##  Cómo ejecutar en local
 
-git clone https://github.com/tuusuario/portafolio-react.git
+git clone https://github.com/lmcadev/portafolio.git
 cd portafolio-react
 npm install
 npm run dev
