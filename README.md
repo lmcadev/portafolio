@@ -82,40 +82,60 @@ Este proyecto utiliza **GitHub Actions** para ejecutar:
 
 ###  Ejemplo de Workflow
 
-name: Deploy to VPS
+name: Deploy React App (No Docker Hub)
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+    - name: Checkout código
+      uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
+    - name: Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
 
-      - name: Build app
-        run: |
-          npm ci
-          npm run build
+    - name: Instalar dependencias y construir app Vite
+      run: |
+        npm install
+        npm run build
 
-      - name: Deploy via SSH
-        uses: appleboy/scp-action@v0.1.3
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          source: "dist/"
-          target: "/var/www/mi-portafolio"
+    - name: Verificar contenido de carpeta dist/
+      run: |
+        if [ ! -d dist ] || [ -z "$(ls -A dist)" ]; then
+          echo "La carpeta dist está vacía o no fue generada."
+          exit 1
+        fi
+        echo "Contenido de dist:"
+        ls -l dist
 
-      - name: Reload Nginx
-        run: ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "sudo systemctl reload nginx"
+    - name: Subir carpeta dist/ al VPS
+      uses: appleboy/scp-action@v0.1.3
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: 22
+        source: "dist/*"
+        target: "/home/${{ secrets.VPS_USER }}/react-cicd/app/"
+
+    - name: Reiniciar contenedor nginx en el VPS
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        script: |
+          cd ~/react-cicd
+          docker compose down
+          docker compose up -d
 
 ---
 
@@ -135,8 +155,11 @@ jobs:
 ##  Cómo ejecutar en local
 
 git clone https://github.com/lmcadev/portafolio.git
+
 cd portafolio-react
+
 npm install
+
 npm run dev
 
 ---
@@ -144,6 +167,7 @@ npm run dev
 ##  Docker (opcional)
 
 docker build -t portafolio .
+
 docker run -p 80:80 portafolio
 
 ---
