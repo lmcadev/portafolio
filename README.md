@@ -122,7 +122,7 @@ jobs:
 ##  Enlace en vivo
 
 🖥️ Puedes visitar mi portafolio aquí:  
-👉 **https://lmcadev.com**
+👉 **https://lmcadev.com/**
 
 ---
 
