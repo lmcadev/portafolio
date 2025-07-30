@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Database, Code, Server, BrainCircuit, Briefcase, GraduationCap, FolderGit2, Mail } from 'lucide-react';
+
 import { developerData } from '@/data/developerData';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -28,6 +29,8 @@ const ResumePage = () => {
       <Helmet>
         <title>{`${personal.name} | ${personal.title}`}</title>
         <meta name="description" content={about} />
+        {/* favicon */}
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='7' width='20' height='14' rx='2' ry='2'/%3E%3Cpath d='M16 3h-8v4h8V3z'/%3E%3Cpath d='M2 13h20'/%3E%3C/svg%3E" />
       </Helmet>
       <div className="bg-background text-foreground min-h-screen">
         <main className="relative z-10 container mx-auto px-4">
@@ -52,6 +55,11 @@ const ResumePage = () => {
                 <Button variant="secondary" asChild>
                   <a href={personal.github} target="_blank" rel="noopener noreferrer">
                     <FolderGit2 className="mr-2 h-4 w-4" /> GitHub
+                  </a>
+                </Button>
+                <Button variant="secondary" asChild>
+                  <a href={personal.linkedin} target="_blank" rel="noopener noreferrer">
+                    <Briefcase className="mr-2 h-4 w-4" /> LinkedIn
                   </a>
                 </Button>
               </div>
