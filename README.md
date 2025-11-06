@@ -18,28 +18,28 @@ Bienvenido a mi portafolio profesional. Este proyecto está construido con **Rea
 
 ---
 
-## 🚀 Tecnologías utilizadas
+##  Tecnologías utilizadas
 
-| 🧩 Frontend         | ⚙️ DevOps / CI/CD     | ☁️ Hosting / Infraestructura |
+|  Frontend         |  DevOps / CI/CD     |  Hosting / Infraestructura |
 |--------------------|------------------------|------------------------------|
-| ⚛️ React (Vite)     | 🐙 GitHub Actions       | 🖥️ VPS Ubuntu 20.04          |
-| 💅 TailwindCSS      | 🐳 Docker + Compose     | 🌐 Nginx Reverse Proxy       |
-| 📦 Vite             | 🔁 Git Flow             | 🔐 HTTPS con SSL             |
+|  React (Vite)     |  GitHub Actions       |  VPS Ubuntu 20.04          |
+|  TailwindCSS      |  Docker + Compose     |  Nginx Reverse Proxy       |
+|  Vite             |  Git Flow             |  HTTPS con SSL             |
 
 ---
 
-## ✨ Características principales
+##  Características principales
 
-- ⚡ Interfaz rápida y moderna con **React + Vite**
-- 📱 Diseño **responsive** y enfoque **mobile-first**
-- 📂 Secciones: **Inicio, Proyectos, Habilidades, Contacto**
-- 🚀 Despliegue automático con **GitHub Actions + Docker**
-- 🧩 CI/CD directo a **VPS privado con Nginx**
-- 🔐 Seguridad con **certificado SSL + configuración segura**
+-  Interfaz rápida y moderna con **React + Vite**
+-  Diseño **responsive** y enfoque **mobile-first**
+-  Secciones: **Inicio, Proyectos, Habilidades, Contacto**
+-  Despliegue automático con **GitHub Actions + Docker**
+-  CI/CD directo a **VPS privado con Nginx**
+-  Seguridad con **certificado SSL + configuración segura**
 
 ---
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 portafolio-react/
 
@@ -71,14 +71,14 @@ portafolio-react/
 
 ---
 
-## ⚙️ CI/CD con GitHub Actions
+##  CI/CD con GitHub Actions
 
 Este proyecto utiliza **GitHub Actions** para ejecutar:
 
-1. 🧪 Tests y build automático en cada `push`
-2. 🐳 Construcción de imagen Docker
-3. 📤 Despliegue automático vía SSH a VPS
-4. 🔄 Reinicio de contenedor y recarga Nginx
+1.  Tests y build automático en cada `push`
+2.  Construcción de imagen Docker
+3.  Despliegue automático vía SSH a VPS
+4.  Reinicio de contenedor y recarga Nginx
 
 ###  Ejemplo de Workflow
 
@@ -141,8 +141,8 @@ jobs:
 
 ##  Enlace en vivo
 
-🖥️ Puedes visitar mi portafolio aquí:  
-👉 **https://lmcadev.com/**
+ Puedes visitar mi portafolio aquí:  
+ **https://lmcadev.com/**
 
 ---
 
