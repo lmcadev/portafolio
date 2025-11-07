@@ -2,7 +2,7 @@
 export const developerData = {
   personal: {
     name: "Luis Miguel Castañeda Arciniegas",
-    title: "Backend Developer",
+    title: "FullStack Developer",
     email: "lmcadev@gmail.com",
     github: "https://github.com/lmcadev",
     linkedin: "https://www.linkedin.com/in/lmcadev/",
