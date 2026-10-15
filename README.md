@@ -1,6 +1,6 @@
 #  Portafolio Profesional - Luis Miguel Castañeda Arciniegas
 
-Bienvenido a mi portafolio profesional. Este proyecto está construido con **React + Vite**, desplegado automáticamente con un flujo **CI/CD** usando **GitHub Actions** y un **VPS privado**. Aquí encontrarás una muestra de mis habilidades como desarrollador de software y DevOps.
+Bienvenido a mi portafolio profesional. Este proyecto está construido con **React + Vite**, desplegado automáticamente con un flujo **CI/CD** usando **GitHub Actions** y un **VPS privado**. Aquí encontrarás una muestra de mis habilidades como ingeniero de software con enfoque en desarrollo full stack y DevOps.
 
 ---
 
@@ -77,7 +77,7 @@ Este proyecto utiliza **GitHub Actions** para ejecutar:
 
 ##  Enlace en vivo
 
- Puedes visitar mi portafolio aquí:  
+ Puedes visitar mi portafolio aquí:
  **https://lmcadev.com/**
 
 ---
@@ -90,10 +90,20 @@ Este proyecto utiliza **GitHub Actions** para ejecutar:
 
 ##  Sobre mí
 
-Soy **Luis Miguel Castañeda Arciniegas**, estudiante de Ingeniería de Software enfocado en desarrollo **backend** y **frontend** prácticas modernas de **DevOps**. Apasionado por crear soluciones limpias, eficientes y escalables.
+Soy **Luis Miguel Castañeda Arciniegas**, ingeniero de software enfocado en desarrollo **backend** y **frontend** prácticas modernas de **DevOps**. Apasionado por crear soluciones limpias, eficientes y escalables.
 
 - 🔗 LinkedIn: https://linkedin.com/in/lmcadev
 - 📧 Correo: lmcadev@gmail.com
 
 
 
+
+## Actualizar el portafolio
+
+Los proyectos, tecnologías y datos profesionales se editan en `src/data/developerData.js`. Auto3Draw aparece como proyecto destacado, con su stack y un detalle desplegable del flujo CAD/CAM, arquitectura y herramientas de producción.
+
+- `npm run dev`: servidor local.
+- `npm run build`: compilación de producción en `dist/`.
+- `npm run preview`: vista previa de la compilación.
+
+El sitio incluye navegación móvil, filtros por categoría, enlaces a repositorios y contacto por correo.
